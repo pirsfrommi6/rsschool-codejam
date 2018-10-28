@@ -23,6 +23,25 @@ const sumOfOther = require('../src/sumOfOther.js');
 	    
 	    
 	  });
+	  describe('make', function() {
+
+	   it('make_1_ok', function(){
+	    assert.deepEqual(777,  make(15)(34, 21, 666)(41)(sum) );
+	  });
 	  
+	  it('make_2_ok', function(){
+	  assert.deepEqual(30,  make(10)(10)(10)(sum) );
+	  });
+	  
+	  it('make_3_ok', function(){
+	    assert.deepEqual(6,  make(1,1)(1,1,1)(1)(sum) );
+	    });
+
+	  it('make_4_ok', function(){
+	    assert.deepEqual(18,  make(1,1,1,1,1,1)(1,1,1,1,1,1)(1,1,1,1,1,1)(sum) );
+	    });
+
+
+	  });
 	  
 	});
