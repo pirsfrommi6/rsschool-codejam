@@ -1,6 +1,11 @@
 const assert = require('assert');
 
 const sumOfOther = require('../src/sumOfOther.js');
+const {
+	  make,
+	  sum, 
+	} = require('../src/make.js');
+
 
 	describe('cj3', function() {
 	  describe('sumOfOther', function() {
@@ -41,7 +46,8 @@ const sumOfOther = require('../src/sumOfOther.js');
 	    assert.deepEqual(18,  make(1,1,1,1,1,1)(1,1,1,1,1,1)(1,1,1,1,1,1)(sum) );
 	    });
 
-
 	  });
+		
+	  
 	  
 	});
