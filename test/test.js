@@ -5,7 +5,7 @@ const {
 	  make,
 	  sum, 
 	} = require('../src/make.js');
-
+const recursion = require('../src/recursion.js');
 
 	describe('cj3', function() {
 	  describe('sumOfOther', function() {
@@ -48,6 +48,13 @@ const {
 
 	  });
 		
-	  
+	  describe('recursion', function() {
+	    it('rec_1_ok', function(){
+	      assert.deepEqual( [[100], [90, 120], [70,99,110,130]],  recursion({"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},"right":{"value":120,"left":{"value":110},"right":{"value":130}}}) );
+	    });
+	    it('rec_1_ok', function(){
+		      assert.deepEqual( [[999]],  recursion({"value":999}));
+		    });  
+	  });
 	  
 	});
