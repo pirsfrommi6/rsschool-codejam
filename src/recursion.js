@@ -1,14 +1,16 @@
-function recursion(arg) {
-	if (!(arg.left && arg.right)) {
-		return [ [ arg.value ] ];
+function recursion(objectTree) {
+	if (!(objectTree.left && objectTree.right)) {
+		return [ [ objectTree.value ] ];
 	}
+	
 	// only if left&right not null & ===
-	const left = recursion(arg.left);
-	const right = recursion(arg.right);
+	
+	const left = recursion(objectTree.left);
+	const right = recursion(objectTree.right);
 	const arr = [];
-	const leftsize = left.length;
-	arr.push([ arg.value ]);
-	for (let i = 0; i < leftsize; i++) {
+	const lefLength = left.length;
+		arr.push([ objectTree.value ]);
+	for (let i = 0; i < lefLength; i++) {
 		arr.push(left[i].concat(right[i]));
 	}
 	return arr;
